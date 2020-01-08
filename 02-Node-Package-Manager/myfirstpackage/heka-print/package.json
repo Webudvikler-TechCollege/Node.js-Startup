@@ -1,0 +1,12 @@
+{
+    "name": "heka-print",
+    "version": "1.0.0",
+    "description": "Mit første node modul",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "HeinzK",
+    "license": "ISC"
+  }
+  

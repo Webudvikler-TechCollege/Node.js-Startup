@@ -1,0 +1,12 @@
+<!-- views/pages/sange.ejs -->
+<% include ../partials/header %>    
+
+        <h1><%= title %></h1>
+        <p><%= content %></p>
+
+        <ul>
+        <% songs.forEach(function(song) { %>
+            <li><%= song.title %> - <%= song.artist %></li>
+        <% }); %> 
+       
+<% include ../partials/footer %>

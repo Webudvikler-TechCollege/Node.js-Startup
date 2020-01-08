@@ -1,0 +1,29 @@
+{
+  "name": "nodeclass",
+  "version": "1.0.0",
+  "description": "Node Tutorial Files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netheinz/nodeclass.git"
+  },
+  "author": "Heinz K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netheinz/nodeclass/issues"
+  },
+  "homepage": "https://github.com/netheinz/nodeclass#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.3.0",
+    "nodemailer": "^5.1.1",
+    "url": "^0.11.0"
+  }
+}
