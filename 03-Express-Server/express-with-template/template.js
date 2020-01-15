@@ -9,8 +9,10 @@ module.exports = (title, content) => `
         <title>${title}</title>        
     </head>
     <body>
+        <hr>
         <h1>${title}</h1>
         <section>${content}</section>
+        <hr>
     </body>
     </html>
 `;

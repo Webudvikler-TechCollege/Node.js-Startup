@@ -1,18 +1,18 @@
 const express = require('express');
 const app = express();
-const fetch = require('node-fetch');
 
 //Sætter view engine til ejs
 app.set('view engine', 'ejs');
 
 //Korrigerer view mappe
-app.set('views','lektion-7-server/express-with-ejs/views');
+app.set('views',__dirname + '/views');
 app.use(express.static(__dirname + '/'));
 
 //Forside
 app.get("/", (req, res) => {
+
     let title = "Velkommen til sangbogen";
-    let content = "";
+    let content = "Blah blah blah";
     
     res.render('pages/index', {
         title: title,
