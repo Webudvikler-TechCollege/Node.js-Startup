@@ -15,20 +15,41 @@ app.get("/", (req, res) => {
     });
 });
 
-//Sange
-app.get("/test", (req, res) => {
+//Sang API
+app.get("/sange", (req, res) => {
+
     //Definerer array med sange
     let songs = [
         {title: "Midt om natten", artist: "Kim Larsen"},
         {title: "Fed rock", artist: "Shubidua"},
         {title: "Vilde kaniner", artist: "Gnags"}
-    ];
+    ];    
 
-    res.render('pages/index', {
+    res.render('pages/sange', {
         title: "Sange",
         content: "Her er en liste over sange",
         songs: songs
     });
+
+});
+
+
+//Sange
+app.get("/sangtext", (req, res) => {
+
+    //Definerer array med sange
+    let songs = [
+        {title: "Midt om natten", artist: "Kim Larsen"},
+        {title: "Fed rock", artist: "Shubidua"},
+        {title: "Vilde kaniner", artist: "Gnags"}
+    ];    
+
+    res.render('pages/sange', {
+        title: "Sange",
+        content: "Her er en liste over sange",
+        songs: songs
+    });
+
 });
 
 //404 meddelelse
