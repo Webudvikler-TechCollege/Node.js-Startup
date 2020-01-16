@@ -9,20 +9,14 @@ app.use(express.static(__dirname + '/'));
 
 //Route til forside
 app.get("/", (req, res) => {
-    let title = "Velkommen til sangbogen";
-    let content = "Blah blah blah";
-    
     res.render('pages/index', {
-        title: title,
-        content: content
+        title: "Den store sangbog",
+        content: "Test"
     });
 });
 
 //Sange
-app.get("/sange", (req, res) => {
-    let title = "Sange";
-    let content = "";
-
+app.get("/test", (req, res) => {
     //Definerer array med sange
     let songs = [
         {title: "Midt om natten", artist: "Kim Larsen"},
@@ -30,9 +24,9 @@ app.get("/sange", (req, res) => {
         {title: "Vilde kaniner", artist: "Gnags"}
     ];
 
-    res.render('pages/sange', {
-        title: title,
-        content: content,
+    res.render('pages/index', {
+        title: "Sange",
+        content: "Her er en liste over sange",
         songs: songs
     });
 });
