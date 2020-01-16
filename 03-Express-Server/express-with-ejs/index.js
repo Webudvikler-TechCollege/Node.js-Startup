@@ -4,13 +4,11 @@ const app = express();
 //Sætter view engine til ejs
 app.set('view engine', 'ejs');
 
-//Korrigerer view mappe
-app.set('views',__dirname + '/views');
+//Definerer root mappe til css referencer m.m.
 app.use(express.static(__dirname + '/'));
 
-//Forside
+//Route til forside
 app.get("/", (req, res) => {
-
     let title = "Velkommen til sangbogen";
     let content = "Blah blah blah";
     
@@ -25,8 +23,9 @@ app.get("/sange", (req, res) => {
     let title = "Sange";
     let content = "";
 
+    //Definerer array med sange
     let songs = [
-        { title: "Midt om natten", artist: "Kim Larsen"},
+        {title: "Midt om natten", artist: "Kim Larsen"},
         {title: "Fed rock", artist: "Shubidua"},
         {title: "Vilde kaniner", artist: "Gnags"}
     ];
