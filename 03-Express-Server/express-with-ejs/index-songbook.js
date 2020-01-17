@@ -8,27 +8,17 @@ app.set('view engine', 'ejs');
 //Definerer root mappe til css referencer m.m.
 app.use(express.static(__dirname + '/'));
 
-function myFunction() {
-    cars.sort(function(a, b){
-        var x = a.type.toLowerCase();
-        var y = b.type.toLowerCase();
-        if (x < y) {return -1;}
-        if (x > y) {return 1;}
-        return 0;
-    });
-    displayCars();
-}
-
-//Route til forside
+//Route til liste med sange
 app.get("/list", (req, res) => {
-    let title = "Sangliste";
-    let content = "Her finder du udvalgte lister.";
-
+    //Fetch API data
     fetch('https://api.mediehuset.net/songbook/')
+        //Parse data as json
         .then(response => response.json())
+        //Array data
         .then(data => {
-            const songs = data.song;
-            songs.sort(
+            const songlist = data.song;
+            //Sorter sange efter artist_navn
+            songlist.sort(
                 function(a, b){
                     var x = a.artist_name.toLowerCase();
                     var y = b.artist_name.toLowerCase();
@@ -37,27 +27,29 @@ app.get("/list", (req, res) => {
                     return 0;                
                 }
             );
-            res.render('pages/list', {
-                title: title,
-                content: content,
-                songs: songs
+            //Render til EJS side
+            res.render('pages/songlist', {
+                title: "Sangliste",
+                content: "Her finder du udvalgte lister.",
+                songlist: songlist
             });
         })
 });
 
+//Route til detalje side - skal have et parameter - eks: http://localhost:4242/details/233
 app.get('/details/:id([0-9]*)', (req, res) => {
-    let title = "Vis sang";
-    let content = "Her finder du tekst og akkorder til en sang";
-    //res.end('Henter id ' + req.params.id);
+    //Fetch API data
     fetch('https://api.mediehuset.net/songbook/')
+        //Parse data as json
         .then(response => response.json())
+        //Array data
         .then(data => {
-            const songs = data.song;
-            const obj = songs.find(obj => obj.id == req.params.id);
-            res.render('pages/details', {
-                title: title,
-                content: content,
-                song: obj
+            const songlist = data.song;
+            const song = songlist.find(obj => obj.id == req.params.id);
+            res.render('pages/songdetails', {
+                title: "Vis sang",
+                content: "Her finder du tekst og akkorder til en sang",
+                song: song
             });
         })
 })

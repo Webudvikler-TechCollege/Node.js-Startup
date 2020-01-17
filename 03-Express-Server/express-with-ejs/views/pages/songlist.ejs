@@ -5,7 +5,7 @@
     <p><%= content %></p>
 
     <ul class="list">
-    <% songs.forEach(function(song) { %>
+    <% songlist.forEach(function(song) { %>
         <li><a href="/details/<%= song.id %>"><%= song.title %></a> - <%= song.artist_name %></li>
     <% }); %> 
     </ul>
