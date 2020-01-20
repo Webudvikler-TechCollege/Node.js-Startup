@@ -7,6 +7,7 @@ app.set('view engine', 'ejs');
 
 //Definerer root mappe til css referencer m.m.
 app.use(express.static(__dirname + '/'));
+//app.use(express.static('/Users/heinz/Sites/Node.js-Startup/03-Express-Server/express-with-ejs/'));
 
 //Route til liste med sange
 app.get("/list", (req, res) => {
@@ -17,16 +18,7 @@ app.get("/list", (req, res) => {
         //Array data
         .then(data => {
             const songlist = data.song;
-            //Sorter sange efter artist_navn
-            songlist.sort(
-                function(a, b){
-                    var x = a.artist_name.toLowerCase();
-                    var y = b.artist_name.toLowerCase();
-                    if (x < y) {return -1;}
-                    if (x > y) {return 1;}
-                    return 0;                
-                }
-            );
+
             //Render til EJS side
             res.render('pages/songlist', {
                 title: "Sangliste",
