@@ -4,6 +4,14 @@
     <h1><%= title %></h1>
     <p><%= content %></p>
 
+    <p>Sortering: 
+        <a href="/list/a-z/">A - Å</a> |
+        <a href="/list/z-a/">Å - A</a> |   
+        <a href="/list/art-a-z/">Artist A - Å</a> |   
+        <a href="/list/art-z-a/">Artist Å - A</a> |   
+    </p>
+
+
     <ul class="list">
     <% songlist.forEach(function(song) { %>
         <li><a href="/details/<%= song.id %>"><%= song.title %></a> - <%= song.artist_name %></li>
