@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/netheinz/nodeclass#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "formidable": "^1.2.1",
