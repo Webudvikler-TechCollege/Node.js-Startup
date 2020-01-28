@@ -52,5 +52,19 @@ app.listen(3000, () => {
     console.log('Express kører på port 3000');
 });
 ```
-
+13. Opret fil til views: views/pages/index.ejs og indtast følgende:
+```html
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+     <%= content %>
+  </body>
+</html>
+```
+14. Kør applikationen fra din terminal:
+```
+nodemon index.js
+```
 
