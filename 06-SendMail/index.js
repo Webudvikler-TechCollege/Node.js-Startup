@@ -7,14 +7,14 @@ var transporter = nodemailer.createTransport({
     secure: false,
     requireTLS: true,    
     auth: {
-        user: 'username',
-        pass: 'password'
+        user: 'info@netheinz.dk',
+        pass: 'H1Mm3rL@ndsV3j34!'
     }
 });
 
 var mailopts =  {
-    from: 'sender@email.dk',
-    to: 'friend@mail.dk',
+    from: 'info@netheinz.dk',
+    to: 'heka@techcollege.dk',
     subject: 'Mail fra Node.js app',
     text: 'Tekst til mail body'
 };
