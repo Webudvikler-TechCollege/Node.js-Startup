@@ -24,7 +24,7 @@ npm install -g ejs
 ```
 8. Installer nodemon i terminal:
 ```
-npm install -gD nodemon
+npm install -g nodemon
 ```
 9. Skriv i index.js for at starte express server:
 ```javascript
@@ -35,8 +35,7 @@ const port = 4242;
 10. Skriv følgende for at klargøre EJS engine:
 ```javascript
 app.set('view engine', 'ejs');
-app.set('views','./');
-app.use(express.static('./'));
+app.use(express.static('/assets'));
 ```
 11. Opsæt router til side med sangliste. Start med at lave en kostant som henter fil med vores router. (Den laver vi senere).
 ```javascript
