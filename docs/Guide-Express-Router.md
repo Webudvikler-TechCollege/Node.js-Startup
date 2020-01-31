@@ -1,5 +1,4 @@
-# Node.js-Startup med Router
-## Node.js for begyndere
+# Guide til routing med Express & EJS
 Følgende er en guide til at sætte et Node projekt op med Express og EJS. I guiden er der fokus på anvende Express' .Router() og en struktur hvor routes ligger i en seperat folder. 
 
 1. Opret mappe i din stifinder

@@ -1,5 +1,4 @@
-# Node.js-Startup
-## Node.js for begyndere
+# Guide til Node.js, Express & EJS 
 Følgende er en guide til at sætte et Node projekt op med Express og EJS. I guiden er der fokus på opsætte en simpel løsning med Express og EJS. 
 
 1. Opret mappe i din stifinder
