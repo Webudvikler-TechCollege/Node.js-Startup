@@ -72,3 +72,8 @@ Prøv eventuelt at gennemgå guiden hvor du  øver dig i at forklare de enkelte 
 Skriv eventuelt ned hvilke dele kan du forstår, kan forklare og anvende. 
 
 Skriv også ned hvis der er ord eller begreber som du ikke forstår.
+
+## Læs mere
+* [Express - hurtigt og minimalistisk server framework til Node.js &raquo;](https://expressjs.com/)
+
+* [EJS - Embedded JavaScript templating &raquo;](https://ejs.co/)
